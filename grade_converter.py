@@ -1,8 +1,8 @@
 # FILE NAME - grade_converter.py
 
-# NAME: 
-# DATE: 
-# BRIEF DESCRIPTION:  
+# NAME: Casey Gantz
+# DATE: 3/1/26
+# BRIEF DESCRIPTION:  converting grades from a number value to a letter value
 
 
 
@@ -15,22 +15,36 @@
 
 ########## ENTER YER CODE BELOW THIS LINE ##########
 
-print('===== Grade Converter =====')
+def convert_grade(score):
+    if score > 100:
+        return "A+"
+     
+    elif score >= 90:
+        return "A"
+     
+    elif score >= 80:
+        return "B"
+     
+    elif score >= 70:
+        return "C"
+     
+    elif score >= 60:
+        return "D"
+     
+    else:
+        return "F"
+     
+try:
+    num = float(input("Enter a numerical grade (1-100): "))
+    print(convert_grade(num))
+except ValueError:
+    print("Please enter a valid number.")
 
-percent = int(input('Enter a numerical grade (1-100): '))
 
-if percent > 100:
-    print('A+')
-elif percent >= 90:
-    print('A')
-elif percent >= 80:
-    print('B')
-elif percent >= 70:
-    print('C')
-elif percent >= 65:
-    print('D')
-else:
-    print('F')
+
+
+
+
 
 ########### END YER CODE ABOVE THIS LINE ###########
 
@@ -85,7 +99,7 @@ D
 1. What is something you would tell a future student to be careful about when
    doing this lab?
 
-
+Remember indentations. Frequently code just dosent run when the parts underneath arent indented. 
 
 
 
